@@ -1,4 +1,5 @@
 <?php
+namespace BWB\CORE;
 
 abstract class Controller {
 

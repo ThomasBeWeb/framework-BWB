@@ -1,6 +1,7 @@
 <?php
-namespace BWB\Framework\mvc;
-use BWB\Framework\mvc\Repository_interface;
+namespace BWB\CORE;
+use BWB\CORE\Crud_interface;
+use BWB\CORE\Repository_interface;
 
 /**
  * Le dao est un objet servant de couche intermediare entre la couche metier et la db
@@ -9,7 +10,7 @@ use BWB\Framework\mvc\Repository_interface;
 
  //abstract pour ne pas pouvoir faire d'objet Dao seul
 
-abstract class Dao implements Crud_interface,Repository_interface { //final empeche l'heritage
+abstract class Dao implements Crud_interface,Repository_interface {
 
     protected $pdo;
 

@@ -1,5 +1,5 @@
 <?php
-namespace BWB\Framework\mvc;
+namespace BWB\CORE;
 
 interface Repository_interface{
 

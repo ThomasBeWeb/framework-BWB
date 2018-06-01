@@ -1,0 +1,15 @@
+{
+    "name": "bwb/framework",
+    "authors": [
+        {
+            "name": "ThomasBeWeb",
+            "email": "tcantinelli@gmail.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "BWB\\CORE\\":"core"
+        }
+    }
+}
