@@ -9,7 +9,9 @@
     "require": {},
     "autoload": {
         "psr-4": {
-            "BWB\\CORE\\":"core"
+            "BWB\\CORE\\":"core",
+            "BWB\\CONTROLLERS\\":"controllers",
+            "BWB\\MODELS\\":"models"
         }
     }
 }
