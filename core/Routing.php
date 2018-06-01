@@ -29,7 +29,7 @@ class Routing {
             if($this->comperes($url,$uri,$args)){
                 
                 if(is_array($value)){
-
+                    echo "tutu";
                     if(isset($value[$_SERVER['REQUEST_METHOD']])){
                         $controllerMethode = $value[$_SERVER['REQUEST_METHOD']];
                     }
@@ -41,7 +41,7 @@ class Routing {
 
             }
         }
-
+        
         return $this->invoke(array($controllerMethode => $args));
     }
 
@@ -67,7 +67,7 @@ class Routing {
             }
 
         }
-
+        
         return $flag;
     }
 
@@ -89,10 +89,32 @@ class Routing {
         $elements = explode(':',$keys[0]);
 
         //Creation de l'objet ciblé
-        $object = new $elements[0]();
+        //Pour être compatible avec nampespace, il faut créer la classe sous la forme BWB\CORE\Class
+        $fullObject = "BWB\\CORE\\".$elements[0];
+        $object = new $fullObject();
 
         //Retourne objet + methode
         return call_user_func_array(array($object, $elements[1]), $tab[$keys[0]]);
 
+    }
+
+    /**
+     * Get the value of routing
+     */ 
+    public function getRouting()
+    {
+        return $this->routing;
+    }
+
+    /**
+     * Set the value of routing
+     *
+     * @return  self
+     */ 
+    public function setRouting($routing)
+    {
+        $this->routing = $routing;
+
+        return $this;
     }
 }

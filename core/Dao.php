@@ -2,6 +2,7 @@
 namespace BWB\CORE;
 use BWB\CORE\Crud_interface;
 use BWB\CORE\Repository_interface;
+use PDO;
 
 /**
  * Le dao est un objet servant de couche intermediare entre la couche metier et la db
